@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="MissingConstraints"
+        android:orientation="vertical"
+        android:background="@android:color/transparent"
+        >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@android:color/background_light"
+        >
+
+    <Button
+        android:id="@+id/stopScan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stop Scan"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Not Detected"
+        />
+
+    </LinearLayout>
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="1850px"
+            android:id="@+id/arfragment"
+            android:name="com.example.arimage1.CustomARFragment"
+            >
+
+        </fragment>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/mediaControlPanel"
+        android:visibility="invisible"
+        android:alpha="1"
+        >
+        <Button
+            android:id="@+id/rewind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="rewind"
+            android:visibility="visible"
+            android:layout_alignParentLeft="true"
+            tools:ignore="MissingConstraints"
+            />
+        <Button
+            android:id="@+id/pause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pause"
+            android:visibility="visible"
+            tools:ignore="MissingConstraints"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="120px"
+            android:layout_marginRight="130px"
+            />
+        <Button
+            android:id="@+id/forward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forward"
+            android:visibility="visible"
+            android:layout_alignParentRight="true"
+            tools:ignore="MissingConstraints"
+            />
+    </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
